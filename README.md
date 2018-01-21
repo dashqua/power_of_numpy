@@ -60,7 +60,7 @@ Moreover, adding a MPI version could be interesting, and testing on a more serio
 
 Now, for algebraic operations at that scale, Python seems to perform well and its ability to be easy to code and easy to read makes it well suited for small applications.
 
-Note: I realised that I didn't that I don't use CBLAS (C implementation of BLAS Fortran library) because I found out that Numpy also uses some routines from ATLAS, an implementation of BLAS/LAPACK.
+Note: I realised that I didn't that I don't use CBLAS (C implementation of BLAS Fortran library) because I found out that Numpy also uses some routines from ATLAS, an implementation of BLAS/LAPACK. However it would be interesting to use fortran wrappers, even BLAS original library to compare.
 
 
 
