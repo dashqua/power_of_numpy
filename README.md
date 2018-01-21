@@ -29,9 +29,9 @@ I did useful things like using actual numpy arrays and not regular py lists, avo
 - Basic Parallelization of C methods. I consider OpenMP to be the best tool to dive into the parallel computing. Simple to use, it still produces a reasonnable speedup as we can see on the graphs. An implementation of MPI has been considered but the author has some trouble with non blocking message parsing paradigm... Moreover, there has to be a mpi library for python but it may not suit our need since python remains a scripting language, and because such library would be based on a ctypes casting like in this code for sure.
 
 
-![Pure python3 launch](/python500.png)
+![Pure python3 launch](/python500.png) Pure python
 
-![Pre compiled Cython](/cython500.png)
+![Pre compiled Cython](/cython500.png) Cython
 
 We can actually see that Numpy definetely explodes other implementations of the matrix product. As I said earlier, I think this is because of severals reasons:
 
@@ -49,6 +49,17 @@ We can actually see that Numpy definetely explodes other implementations of the 
 
 Nevertheless, I should not throw my project out of the window. Indeed I restricted the tests at kind of "small" dimensions (up to 1000x1000, then my laptop melted) and I think the graphs would be more different with big matrices (without taking their emptiness into account in numpy routines). This thought is mainly supported by the fact that I am using a basic implementation of OpenMP, and Numpy seems to work (at least by default) on a single thread (looks like it does, on htop).
 
-![First region of Cython tests](/cython200.png)
+![First region of Cython tests](/cython200.png) First region of Cython
+
+Here we can see that the exotic implementation of the matrix product sometimes beats Numpy at some points that I hope are not peaks due to some random excitation of my pentium..
+
+## What to do next ?
+
+Optimize even more the code, at the numpy and the C implementation sides.
+Moreover, adding a MPI version could be interesting, and testing on a more serious machine would surely show the advantage of using multithreading.
+
+Now, for algebraic operations at that scale, Python seems to perform well and its ability to be easy to code and easy to read makes it well suited for small applications.
+
+
 
 
