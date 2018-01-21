@@ -29,6 +29,8 @@ I did useful things like using actual numpy arrays and not regular py lists, avo
 - Basic Parallelization of C methods. I consider OpenMP to be the best tool to dive into the parallel computing. Simple to use, it still produces a reasonnable speedup as we can see on the graphs. An implementation of MPI has been considered but the author has some trouble with non blocking message parsing paradigm... Moreover, there has to be a mpi library for python but it may not suit our need since python remains a scripting language, and because such library would be based on a ctypes casting like in this code for sure.
 
 
-![GitHub Logo](/python500.png)
-Format: ![ Text](url)
+![Pure python3 launch](/python500.png)
+
+![Pre compiled Cython](/cython500.png)
+
 
