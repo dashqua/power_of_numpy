@@ -1,4 +1,4 @@
-#Power of Numpy
+# Power of Numpy
 
 This show that indeed, the numpy library is well coded :-)
 
@@ -45,7 +45,10 @@ We can actually see that Numpy definetely explodes other implementations of the 
 
 - Many more reasons why Numpy rocks
 
-##Disclaimer
+## Disclaimer
 
 Nevertheless, I should not throw my project out of the window. Indeed I restricted the tests at kind of "small" dimensions (up to 1000x1000, then my laptop melted) and I think the graphs would be more different with big matrices (without taking their emptiness into account in numpy routines). This thought is mainly supported by the fact that I am using a basic implementation of OpenMP, and Numpy seems to work (at least by default) on a single thread (looks like it does, on htop).
+
+![First region of Cython tests](/cython200.png)
+
 
