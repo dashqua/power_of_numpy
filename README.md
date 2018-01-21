@@ -30,5 +30,5 @@ I did useful things like using actual numpy arrays and not regular py lists, avo
 
 
 ![GitHub Logo](/python500.png)
-Format: ![Alt Text](url)
+Format: ![ Text](url)
 
