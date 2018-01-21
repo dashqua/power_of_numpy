@@ -33,4 +33,19 @@ I did useful things like using actual numpy arrays and not regular py lists, avo
 
 ![Pre compiled Cython](/cython500.png)
 
+We can actually see that Numpy definetely explodes other implementations of the matrix product. As I said earlier, I think this is because of severals reasons:
+
+- Obviously Numpy is a couple of years old. It has been developped by scientists for scientists ( see SciPy) and performs basically any type of computation that we would need in a scientific computing application. 
+
+- It has been written to run fast, and has been opimized and revised over the time
+
+- It is partly based on ctypes library, a C wrap interface. And C is fast.
+
+- It is optimized to detect and take into account some parameters on matrices. For example I noticed that it seems that numpy detects when one of the argument is empty, or the zero matrix, and immediately returns 0.
+
+- Many more reasons why Numpy rocks
+
+##Disclaimer
+
+Nevertheless, I should not throw my project out of the window. Indeed I restricted the tests at kind of "small" dimensions (up to 1000x1000, then my laptop melted) and I think the graphs would be more different with big matrices (without taking their emptiness into account in numpy routines). This thought is mainly supported by the fact that I am using a basic implementation of OpenMP, and Numpy seems to work (at least by default) on a single thread (looks like it does, on htop).
 
